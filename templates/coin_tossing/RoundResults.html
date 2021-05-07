@@ -1,0 +1,33 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Resultados de la Ronda
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        En esta ronda, reportaste {{ guess }}.
+    </p>
+    <p>
+        Por lo tanto, tu pago de la ronda es {{ player.payoff }}
+    </p>
+    <p>
+        Tu pago acumulado es {{ accumulated_payoff }}
+    </p>
+    <p>
+        {% if pay_random_app %}
+            {% if last_round %}
+                La aplicación escogida para el pago es la {{ paid_app }}. Por lo tanto, tu pago final del experimento es {{ participant.payoff }}
+            {% endif %}
+        {% endif %}
+
+    </p>
+
+
+
+    {% next_button %}
+{% endblock %}
+
+

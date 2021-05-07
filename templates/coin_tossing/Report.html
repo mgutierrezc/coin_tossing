@@ -1,0 +1,19 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Reporta los resultados
+{% endblock %}
+
+{% block content %}
+
+    {% if real_coin_value == Constants.head_value %}
+        <img src="{% static 'cara.png' %}"/>
+    {% else %}
+        <img src="{% static 'sello.png' %}"/>
+    {% endif %}
+
+    {% formfields %}
+
+    {% next_button %}
+{% endblock %}

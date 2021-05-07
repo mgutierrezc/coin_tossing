@@ -1,0 +1,24 @@
+{% load otree static %}
+
+<h3>
+    Instrucciones
+</h3>
+
+    <p>
+        Lanzarás una moneda {{ Constants.num_rounds }} veces y tendrás que declarar
+        si salió {{ Constants.head_value }} o {{ Constants.tail_value }}. Cada vez que
+        declares {{ Constants.head_value }}, ganarás {{ Constants.head_payment }}.
+    </p>
+    <p>
+        <ul>
+            <li>La moneda es {{ Constants.head_value }} si se ve la siguiente imagen:<br>
+                <img height="100" width="100" src="{% static 'cara.png' %}"/>
+            </li>
+            <li>La moneda es {{ Constants.tail_value }} si se ve la siguiente imagen:<br>
+                <img height="100" width="100" src="{% static 'sello.png' %}"/>
+            </li>
+        </ul>
+    </p>
+    <p>
+        Si esta dinámica es escogida para ser pagada, recibirás la suma de lo que obtengas en todas las rondas.
+    </p>
